@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="openanalytics">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f6feb"/>
+      <stop offset="1" stop-color="#0b3d91"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#7ee787"/>
+      <stop offset="1" stop-color="#4ea1ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="14" fill="url(#bg)"/>
+  <rect x="12" y="38" width="9" height="14" rx="2.5" fill="url(#bar)"/>
+  <rect x="27.5" y="28" width="9" height="24" rx="2.5" fill="url(#bar)"/>
+  <rect x="43" y="18" width="9" height="34" rx="2.5" fill="url(#bar)"/>
+  <circle cx="47.5" cy="15" r="5" fill="#0d1117"/>
+  <circle cx="47.5" cy="15" r="2.4" fill="#7ee787"/>
+</svg>

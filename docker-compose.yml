@@ -1,0 +1,18 @@
+services:
+  openanalytics:
+    build: .
+    image: openanalytics:local
+    container_name: openanalytics
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/data
+    # Copy .env.example to .env first (or omit this line to use defaults).
+    # Generate a real salt with: python3 -c "import secrets;print(secrets.token_hex(24))"
+    env_file: .env
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,os,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:%s/api/health'%os.environ.get('OPENANALYTICS_PORT','8000'),timeout=2).status==200 else 1)"]
+      interval: 30s
+      timeout: 3s
+      retries: 3

@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Tests / cache
+.pytest_cache/
+.coverage
+htmlcov/
+test/__pycache__/
+
+# Runtime data
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+data/
+.env
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Local dev artifacts
+samples/

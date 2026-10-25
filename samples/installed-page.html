@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>openanalytics — snippet smoke test</title>
+<script async src="http://127.0.0.1:8130/snippet.js"></script>
+</head>
+<body>
+  <h1>openanalytics snippet smoke test</h1>
+  <p id="status">loading…</p>
+  <button id="btn-signup" type="button">fire signup event</button>
+  <script>
+    window.addEventListener('load', function () {
+      document.getElementById('status').textContent =
+        'analytics installed: ' + (typeof window.analytics === 'object');
+    });
+    document.getElementById('btn-signup').addEventListener('click', function () {
+      analytics.track('signup', { plan: 'pro', plan_value: 42 });
+      this.textContent = 'fired';
+    });
+  </script>
+</body>
+</html>
